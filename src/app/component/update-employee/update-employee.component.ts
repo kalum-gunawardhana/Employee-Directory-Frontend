@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeService } from '../employee.service';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 import { Router, ActivatedRoute } from '@angular/router';
-import { Department } from '../department.model';
+import { Department } from '../../model/employee.model';
+import { EmployeeService } from '../../service/employee.service';
+
 
 @Component({
   selector: 'app-update-employee',
+  imports: [ReactiveFormsModule],
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
@@ -13,11 +16,7 @@ export class UpdateEmployeeComponent implements OnInit {
   employeeForm: FormGroup;
   employeeId: number;
   departments: Department[] = [
-    { value: 'HR', viewValue: 'Human Resources' },
-    { value: 'IT', viewValue: 'Information Technology' },
-    { value: 'Finance', viewValue: 'Finance' },
-    { value: 'Marketing', viewValue: 'Marketing' },
-    { value: 'Operations', viewValue: 'Operations' }
+    
   ];
 
   constructor(

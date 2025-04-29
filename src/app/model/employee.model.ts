@@ -6,3 +6,10 @@ export interface Employee {
     createdAt?: Date;
     updatedAt?: Date;
 }
+
+export enum Department {
+    HR = 'HR',
+    IT = 'IT',
+    FINANCE = 'FINANCE',
+    OPERATIONS = 'OPERATIONS'
+}

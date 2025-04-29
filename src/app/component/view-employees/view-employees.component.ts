@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
-import { Employee } from '../employee.model';
+
+
 import { Router } from '@angular/router';
+import { Employee } from '../../model/employee.model';
+import { EmployeeService } from '../../service/employee.service';
 
 @Component({
   selector: 'app-view-employees',
