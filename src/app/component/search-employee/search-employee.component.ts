@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
-import { Employee } from '../employee.model';
+import { Employee } from '../../model/employee.model';
+import { EmployeeService } from '../../service/employee.service';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-search-employee',
+  imports: [FormsModule],
   templateUrl: './search-employee.component.html',
   styleUrls: ['./search-employee.component.css']
 })
