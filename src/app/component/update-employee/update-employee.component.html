@@ -27,7 +27,7 @@
           <label for="department">Department</label>
           <select class="form-control" id="department" formControlName="department" required>
             <option value="">Select Department</option>
-            <option *ngFor="let dept of departments" [value]="dept.value">{{ dept.viewValue }}</option>
+            <!-- <option *ngFor="let dept of departments" [value]="dept.value">{{ dept.viewValue }}</option> -->
           </select>
           <div *ngIf="employeeForm.get('department')?.invalid && (employeeForm.get('department')?.dirty || employeeForm.get('department')?.touched)"
             class="text-danger">

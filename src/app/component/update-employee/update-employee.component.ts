@@ -1,24 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
 import { Router, ActivatedRoute } from '@angular/router';
-import { Department } from '../../model/employee.model';
 import { EmployeeService } from '../../service/employee.service';
 import { CommonModule } from '@angular/common';
 
+// Define these interfaces/enums either here or in your employee.model.ts
+export enum Department {
+  HR = 'HR',
+  IT = 'IT',
+  FINANCE = 'FINANCE',
+  MARKETING = 'MARKETING',  // Added MARKETING to the enum
+  OPERATIONS = 'OPERATIONS'
+}
+
+export interface DepartmentOption {
+  value: Department;
+  viewValue: string;
+}
+
+export interface Employee {
+  id?: number;
+  name: string;
+  email: string;
+  department: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
 
 @Component({
   selector: 'app-update-employee',
   standalone: true,
-  imports: [ReactiveFormsModule, ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],  // Removed duplicate ReactiveFormsModule
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
 export class UpdateEmployeeComponent implements OnInit {
   employeeForm: FormGroup;
   employeeId: number;
-  departments: Department[] = [
-    
+
+  departments: DepartmentOption[] = [
+    { value: Department.HR, viewValue: 'Human Resources' },
+    { value: Department.IT, viewValue: 'Information Technology' },
+    { value: Department.FINANCE, viewValue: 'Finance' },
+    { value: Department.MARKETING, viewValue: 'Marketing' },
+    { value: Department.OPERATIONS, viewValue: 'Operations' }
   ];
 
   constructor(
