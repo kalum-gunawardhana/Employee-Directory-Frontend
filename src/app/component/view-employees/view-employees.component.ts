@@ -4,9 +4,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from '../../model/employee.model';
 import { EmployeeService } from '../../service/employee.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-view-employees',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './view-employees.component.html',
   styleUrls: ['./view-employees.component.css']
 })

@@ -3,11 +3,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 
 import { Router } from '@angular/router';
 import { EmployeeService } from '../../service/employee.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-add-employee',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']
 })

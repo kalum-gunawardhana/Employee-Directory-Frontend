@@ -4,11 +4,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router, ActivatedRoute } from '@angular/router';
 import { Department } from '../../model/employee.model';
 import { EmployeeService } from '../../service/employee.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-update-employee',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })

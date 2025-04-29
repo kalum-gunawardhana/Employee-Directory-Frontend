@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../model/employee.model';
 import { EmployeeService } from '../../service/employee.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-search-employee',
-  imports: [FormsModule],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './search-employee.component.html',
   styleUrls: ['./search-employee.component.css']
 })
