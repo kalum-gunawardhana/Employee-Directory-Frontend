@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-      <h4>Add New Employee</h4>
+      <h4>Update Employee</h4>
     </div>
     <div class="card-body">
       <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
@@ -35,8 +35,8 @@
           </div>
         </div>
         
-        <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Submit</button>
-        <button type="button" class="btn btn-secondary ml-2" (click)="employeeForm.reset()">Reset</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Update</button>
+        <button type="button" class="btn btn-secondary ml-2" (click)="router.navigate(['/view'])">Cancel</button>
       </form>
     </div>
   </div>
