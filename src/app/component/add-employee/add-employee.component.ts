@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeService } from '../employee.service';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 import { Router } from '@angular/router';
-import { Department } from '../department.model';
+import { EmployeeService } from '../../service/employee.service';
+
 
 @Component({
   selector: 'app-add-employee',
+  imports: [ReactiveFormsModule],
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']
 })
