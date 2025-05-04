@@ -1,0 +1,110 @@
+/* Modern Typography-Focused Employee List */
+.container {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    color: #2d3748;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    letter-spacing: 0px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 265px;
+    height: 4px;
+    background: #4f46e5;
+    border-radius: 2px;
+}
+
+/* Table Typography */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.table thead th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #f8fafc;
+    background: #4f46e5;
+    padding: 1rem 1.2rem;
+    border: none;
+}
+
+.table tbody td {
+    padding: 1.1rem 1.2rem;
+    color: #334155;
+    font-weight: 400;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Button Typography */
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.btn-primary {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.btn-sm {
+    font-size: 0.85rem;
+}
+
+/* Special Text Treatments */
+.employee-name {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.employee-email {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.timestamp {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .table thead {
+        font-size: 0.8rem;
+    }
+
+    .table tbody td {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+    }
+}
+
+/* Font Loading (add to your main stylesheet) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');

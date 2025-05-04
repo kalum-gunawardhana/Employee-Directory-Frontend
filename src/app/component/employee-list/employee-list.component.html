@@ -1,5 +1,5 @@
 <div class="container my-4">
-    <h2>Employee List</h2>
+    <h2>Fortium Partners</h2>
     <a routerLink="/employees/add" class="btn btn-primary mb-3">Add Employee</a>
     <table class="table table-bordered">
         <thead>
@@ -8,8 +8,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Department</th>
-                <th>Created At</th>
-                <th>Updated At</th>
+                <th>Created</th>
+                <th>Updated</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 <td>{{ employee.updatedAt }}</td>
                 <td>
                     <a routerLink="/employees/edit/{{ employee.id }}" class="btn btn-sm btn-warning">
-                        Edit
+                        Update
                     </a>
                     <button class="btn btn-sm btn-danger" (click)="deleteEmployee(employee.id!)">
                         Delete
