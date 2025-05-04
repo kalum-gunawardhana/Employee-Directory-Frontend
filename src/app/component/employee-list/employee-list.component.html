@@ -1,1 +1,35 @@
-<p>employee-list works!</p>
+<div class="container my-4">
+    <h2>Employee List</h2>
+    <a routerLink="/employees/add" class="btn btn-primary mb-3">Add Employee</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.createdAt }}</td>
+                <td>{{ employee.updatedAt }}</td>
+                <td>
+                    <a routerLink="/employees/edit/{{ employee.id }}" class="btn btn-sm btn-warning">
+                        Edit
+                    </a>
+                    <button class="btn btn-sm btn-danger" (click)="deleteEmployee(employee.id!)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
